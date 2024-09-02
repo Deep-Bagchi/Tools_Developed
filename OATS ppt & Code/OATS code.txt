@@ -1,0 +1,328 @@
+Public oParameters As Worksheet
+Public oAllCombinations As Worksheet
+Public str, TCID As String
+
+Sub RunAllPairs()
+
+Dim RetVal
+Dim Filename As String
+
+' To generate the Txt file
+
+    Sheets("Parameter").Select
+    Cells.Select
+    Selection.Copy
+    Workbooks.Add
+    ActiveSheet.Paste
+    Range("A1").Select
+    Application.CutCopyMode = False
+    ChDir "C:\AllPairs"
+    ActiveWorkbook.SaveAs Filename:="C:\AllPairs\oats.txt", FileFormat:=xlText _
+        , CreateBackup:=False
+    ActiveWorkbook.Save
+    ActiveWindow.Close
+    Sheets("ReadMe").Select
+    Range("A1").Select
+
+' To Delay the next macro from starting
+    Application.Wait (Now + TimeValue("0:00:02"))
+
+' To run Allpairs program
+    Call Shell("cmd /c c:\ALLPAIRS\ALLPAIRS.bat / ", vbMinimizedFocus)
+    
+' To get the Excel File
+
+' To Delay the next macro from starting
+    Application.Wait (Now + TimeValue("0:00:02"))
+    
+' To copy the data from text file to excel file
+    
+    ChDir "C:\AllPairs"
+    Workbooks.OpenText Filename:="C:\AllPairs\oatsTC.txt", Origin:=437, _
+        StartRow:=1, DataType:=xlDelimited, TextQualifier:=xlDoubleQuote, _
+        ConsecutiveDelimiter:=False, Tab:=True, Semicolon:=False, Comma:=False _
+        , Space:=False, Other:=False, FieldInfo:=Array(Array(1, 1), Array(2, 1), _
+        Array(3, 1), Array(4, 1)), TrailingMinusNumbers:=True
+    Cells.Select
+    Selection.Copy
+    Windows("OATS.xls").Activate
+    Sheets("Temp").Select
+    Range("A1").Select
+    ActiveSheet.Paste
+    Range("A1").Select
+    Application.CutCopyMode = False
+    ActiveWorkbook.Save
+    Windows("oatsTC.txt").Activate
+    Range("A1").Select
+    ActiveWindow.Close
+    Sheets("ReadMe").Select
+    Range("A1").Select
+    
+    ' To generate test cases
+    str = "All Pairs"
+    Call GenerateTestcases
+
+'*******************************************************************
+ 'Code modified to create all combinations of test data in a new tab
+ 'Modified by Mandar (508077)
+ 'Modified on June 27, 2009
+'*******************************************************************
+ Dim iCount As Long, jCount As Integer, k As Long, icomb As Long, counts() As Integer, m As Integer, _
+        n As Integer, ido() As Integer
+     
+  Set oParameters = Application.Worksheets("Parameter")
+  Set oAllCombinations = Application.Worksheets("All Combinations")
+  
+  oAllCombinations.Activate
+    'Clearing old test cases first
+     oAllCombinations.Range("A1").Select
+    oAllCombinations.Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Selection.ClearContents
+    'Clearing old test cases completed
+    oParameters.Activate
+    n = Range("IV1").End(xlToLeft).Column
+    ReDim counts(1 To n), ido(1 To n)
+     
+    iCount = 1
+    For jCount = 1 To n
+        ido(jCount) = 2
+        counts(jCount) = Cells(1, jCount).End(xlDown).Row - 1
+        iCount = iCount * counts(jCount)
+    Next jCount
+    k = 101  'Starting the created rows at Row # 101
+    If iCount > 65536 - k Then
+        MsgBox "A total of  " & iCount & " test cases will be created and Excel has limitations. Hence Exiting." & vbCrLf & "Can you please try to reduce the number of values under the parameters?", _
+               vbOKOnly + vbCritical, "Cartesian Product is beyond Excel limits"
+        Exit Sub
+    End If
+    icomb = 0
+    m = n
+    
+  
+    VaryStuff counts, n, k, icomb, m, ido
+
+    oParameters.Range("A101").Select
+    oParameters.Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Selection.Copy
+    oAllCombinations.Select
+    Selection.PasteSpecial Paste:=xlPasteValuesAndNumberFormats, Operation:= _
+        xlNone, SkipBlanks:=False, Transpose:=False
+    oAllCombinations.Cells.Select
+    oAllCombinations.Cells.EntireColumn.AutoFit
+    oAllCombinations.Range("A1").FormulaR1C1 = "Case" '"Test Case #"
+    oAllCombinations.Range("B1").FormulaR1C1 = "=IF(Parameter!RC[-1]<>"""",Parameter!RC[-1],"""")"
+    oAllCombinations.Range("B1").Select
+    Selection.AutoFill Destination:=Range("B1:IV1"), Type:=xlFillDefault
+    oAllCombinations.Rows("1:1").Select
+    Selection.Copy
+    oAllCombinations.Range("A1").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
+    oAllCombinations.Cells.Select
+    oAllCombinations.Cells.EntireColumn.AutoFit
+    oAllCombinations.Range("A1").Select
+    oParameters.Select
+    oParameters.Range("A102").Select
+    oParameters.Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Application.CutCopyMode = False
+    Selection.ClearContents
+    oParameters.Range("A1").Select
+    MsgBox "A total of  " & TCID & " test cases created using All Pairs Logic." & vbCrLf & "A total of  " & iCount & " test cases possible using All Combinations.", _
+               vbOKOnly + vbInformation, "Test Case Creation - Sucessful"
+        
+    str = ""
+    TCID = ""
+End Sub
+
+Sub VaryStuff(counts As Variant, n As Integer, k As Long, icomb As Long, ByVal m As Integer, _
+              ido As Variant)
+    Dim i As Integer, j As Integer
+    While ido(m) - 1 <= counts(m)
+        If m > 1 Then
+            VaryStuff counts, n, k, icomb, m - 1, ido
+            ido(m) = ido(m) + 1
+        Else
+            k = k + 1
+            icomb = icomb + 1
+            Cells(k, 1) = icomb
+            For j = 1 To n
+                Cells(k, j + 1) = Cells(ido(j), j)
+            Next j
+            ido(m) = ido(m) + 1
+        End If
+    Wend
+    ido(m) = 2
+End Sub
+
+Sub GenerateTestcases()
+
+'*******************************************************************
+ 'Code modified to generate test cases based on the format defined in "Format" sheet
+ 'Modified by Hemanth (705282)
+ 'Modified on June 25 and July 01, 2009
+'*******************************************************************
+  
+ 
+    Dim wkb, asn0, asn1, asn2, asn3 As Object
+    Dim myNum, i, j, rowField, colField, maxField, maxRec As Integer
+    Dim wkbName, fieldName(100), categoryName(100), dataTypeName(100), flag As String
+    Dim TestCase, Colend, Testdesc As String
+
+   ' MsgBox (" This action creates the testcase template ")
+    
+    wkbName = ActiveWorkbook.Name
+    
+    Set wkb = Workbooks(wkbName)
+    If str = "All Pairs" Then
+        Set asn0 = wkb.Sheets("TestCases")
+    Else
+        Set asn0 = wkb.Sheets("TestCases for All combinations")
+    End If
+    Set asn1 = wkb.Sheets("Constants")
+       
+    ' Deletes the existing template and creates a new one.
+    asn0.Select
+    Cells.Select
+    Selection.Delete Shift:=xlUp
+    Range("A1").Select
+    asn1.Select
+    Cells.Select
+    Selection.Copy
+    asn0.Select
+    ActiveSheet.Paste
+    Range("A1:O1").Select
+
+    ' To Copy the temp data to test case template
+    
+    ' MsgBox (" This action generates the Orthogonal testcases ")
+    
+    wkbName = ActiveWorkbook.Name
+    
+    Set wkb = Workbooks(wkbName)
+    
+    Set asn2 = wkb.Sheets("Constants")
+    Set asn3 = wkb.Sheets("Format")
+    
+    If str = "All Pairs" Then
+        Set asn1 = wkb.Sheets("TestCases")
+        Set asn0 = wkb.Sheets("Temp")
+        rowField = 3
+        Colend = "PAIRINGS"
+        PrintCol = 3
+    Else
+        Set asn1 = wkb.Sheets("TestCases for All combinations")
+        Set asn0 = wkb.Sheets("All Combinations")
+        rowField = 1
+        Colend = ""
+        PrintCol = 1
+    End If
+             
+    colField = 1
+    printrow = 2
+             
+    ' Input Validation
+    
+    If (UCase(asn0.Cells(rowField, colField).Text) = "") Then
+        If str = "All Combinations" Then
+            MsgBox ("Field Name is empty" & Chr(10) & "Generate All Combinations first by clicking the Generate Test Cases button and then try to generate the test cases for All combinations")
+        Else
+            MsgBox ("Field Name is empty")
+        End If
+        asn0.Select
+        Range("A1").Select
+        Exit Sub
+    End If
+    
+    While (UCase(asn0.Cells(rowField, 1).Text) <> "")
+            If rowField > 1000 Then
+                MsgBox ("Field Name is empty")
+                asn0.Select
+                Range("A1").Select
+                Exit Sub
+            Else
+                If (UCase(asn0.Cells(rowField, 1).Text) <> "CASE") Then
+                    colhead = 2
+                    TCID = UCase(asn0.Cells(rowField, 1).Text)
+                    'TestCase = "Check the following case" & Chr(10)
+                    
+                    ' New code added - 16.Jun.2009 (Hemanth)
+                    TestCase = asn3.Cells(2, 4).Text
+                    Testdesc = ""
+                    
+                    While (UCase(asn0.Cells(PrintCol, colhead).Text) <> Colend)
+                        
+                        ' Code modified - 16.Jun.2009 (Hemanth)
+                        TestCase = TestCase & " " & asn0.Cells(PrintCol, colhead).Text & " - " & asn0.Cells(rowField, colhead).Text & Chr(10)
+                       
+                       colhead = colhead + 1
+                    Wend
+                    
+                    ' New line added - 16.Jun.2009 (Hemanth)
+                    TestCase = TestCase & Chr(10) & asn3.Cells(2, 5).Text
+                    
+                TCID = Format(printrow - 1, "000")
+                
+                'Modified on 18-Jun-2009
+                asn1.Cells(printrow, 1).Value = asn3.Cells(2, 1).Text 'SRS/FDT Req ID
+                If asn3.Cells(2, 2).Text <> "" Then ' Objective ID (A)
+                    asn1.Cells(printrow, 2).Value = asn3.Cells(2, 2).Text & "_" & TCID
+                Else
+                    asn1.Cells(printrow, 2).Value = TCID
+                End If
+                asn1.Cells(printrow, 3).Value = asn3.Cells(2, 3).Text ' Objective ID (B)
+                asn1.Cells(printrow, 4).Value = TestCase ' Test Objective
+                If asn3.Cells(2, 6).Text <> "" Then ' Pre-Condition
+                    asn1.Cells(printrow, 5).Value = asn3.Cells(2, 6).Text
+                    Testdesc = "Pre -conditions / Prerequisites:" & Chr(10) & asn1.Cells(printrow, 5).Text & Chr(10)
+                Else
+                    Testdesc = "Pre -conditions / Prerequisites:" & Chr(10)
+                End If
+                If asn3.Cells(2, 7).Text <> "" Then  ' Test Data Requirements
+                    asn1.Cells(printrow, 6).Value = asn3.Cells(2, 7).Text
+                    Testdesc = Testdesc & Chr(10) & "Test Data Requirements:" & Chr(10) & asn1.Cells(printrow, 6).Text & Chr(10)
+                Else
+                    Testdesc = Testdesc & Chr(10) & "Test Data Requirements:" & Chr(10)
+                End If
+                asn1.Cells(printrow, 7).Value = asn3.Cells(2, 8).Text ' Expected Results
+                'Testcase ID
+                If asn1.Cells(printrow, 3).Text <> "" Then
+                    asn1.Cells(printrow, 9).Value = asn1.Cells(printrow, 2).Text & "_" & asn1.Cells(printrow, 3).Text
+                Else
+                    asn1.Cells(printrow, 9).Value = asn1.Cells(printrow, 2).Text
+                End If
+                'Testcase Description
+                TestCase = "Objective:" & Chr(10) & asn1.Cells(printrow, 4).Text & Testdesc & Chr(10) & _
+                           "Expected Results:" & Chr(10) & asn1.Cells(printrow, 7).Text & Chr(10) & Chr(10) & _
+                           "Others:" & Chr(10) & asn3.Cells(2, 9).Text
+                asn1.Cells(printrow, 10).Value = TestCase 'Testcase Description
+                asn1.Cells(printrow, 8).Value = asn3.Cells(2, 9).Text ' Others
+                asn1.Cells(printrow, 11).Value = asn3.Cells(2, 10).Text ' Priority
+                asn1.Cells(printrow, 12).Value = asn3.Cells(2, 11).Text 'Complexity
+                asn1.Cells(printrow, 13).Value = asn3.Cells(2, 12).Text 'Automation Status
+                asn1.Cells(printrow, 14).Value = asn3.Cells(2, 13).Text 'Status
+                asn1.Cells(printrow, 15).Value = asn3.Cells(2, 14).Text 'Subject
+                asn1.Cells(printrow, 16).Value = asn3.Cells(2, 15).Text 'Test Type
+                asn1.Cells(printrow, 17).Value = asn3.Cells(2, 16).Text 'Business Function
+                
+                printrow = printrow + 1
+                
+                End If
+                rowField = rowField + 1
+                End If
+                
+    Wend
+End Sub
+
+Sub AllCombinationsTCs()
+
+'To generate test cases for all combinations
+
+str = "All Combinations"
+
+Call GenerateTestcases
+
+str = ""
+
+End Sub
+

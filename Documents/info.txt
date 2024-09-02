@@ -1,0 +1,1007 @@
+01687566-001 HLP
+14056634-001 MTG
+14126718-001 MTG
+
+
+01678805-001 HLP
+01687533-001 HLP
+
+
+14131361- 001 OLBB
+14131338- 001 OLBB
+
+Netmeeting:
+Roopini: 172.29.130.248
+
+58586290954
+LSB-885242
+Game:LSB-885078,884739
+Fame login:
+User Name : DeepBagchi11  
+Password : 7e5b83238c  
+
+
+Saritha Cirix ID: 192679843, Password1(OCC 3rd card, QCC 2nd card)
+
+Nanda's New card SDF: 
+144977949
+QD57VDX
+
+
+Sambandam, Prathibha
+CITRIX LOGIN:
+User Name: 523699718
+Password : Summer09
+LIS: 14368639 BSA
+
+Damodar Kamath, Priya
+CITRIX LOGIN:
+User Name: 143332179
+Password : Summer09
+
+HPQC LOGIN:
+User Name: 143332179
+Password : Password1
+
+Yamini HPQC LOGIN:
+User Name: 196224737
+Password : Rbc@123
+
+Vijay HPQC LOGIN:
+User Name: 527108153
+Password : Igate@123
+
+Vijay CITRIX LOGIN:
+User Name: 527108153
+Password : Winter10
+
+
+
+Naveen Kotha
+CITRIX LOGIN:
+User Name: 143447035
+Password : Password1
+
+
+srf no:143233609
+
+
+Accountant authorization:
+User Name: 198550352
+Password : Password1
+Card no  : 735215022
+
+
+
+Mortgages
+CASPER:
+A/c no: 12019600-001
+srf no: 143451078
+app no: 00404812600
+
+
+OLMS:
+A/c no: 00002-12019634/001
+
+
+_www.istqb.in
+Jegannathan, Harini (iGATE) [5:21 PM]:
+\\sew26010\RBC_PSG$
+Jegannathan, Harini (iGATE) [5:27 PM]:
+\\sew26010\RBC_PSG$\Induction Kit
+
+
+\\W77N9434\SRFNumber
+
+\\W77N9434\Maintenance_Loans_Screenshots
+
+_http://www.stickyminds.com/
+
+
+tso profile link:
+tnocc.fg.rbc.com
+
+Deep TSO Access:
+USERNAME: qshfjjv
+sdf Password: tso123
+IST QCC Password: abc@123
+IST OCC Password: abc@123
+IST BCC Password: abc@123
+
+
+IST OCC---3C
+IST QCC---12
+IST BCC---52
+
+Origenate Access:
+
+http://10.241.238.29:8081/origenate/securitycontrol/default.cfm
+Username: 527425920
+Password: Rbc123
+
+Mukesh Shah TSO Access:
+USERNAME: qf39ss7
+Password: abc999
+
+
+PAVAN TSO Access:
+USERNAME: qf64x5w
+Password: abc123
+
+
+VIJAY TSO Access:
+USERNAME: qshbjxf
+Password: abc123
+
+Priya TSO Access:
+USERNAME: qd5gdc7
+Password: tso999
+
+Hegde, Shubhangi 
+QSJH7KX
+RBC654
+
+
+Yamini TSO Access:
+USERNAME: qf546jw
+Password: abc222
+\\DSQJ843L\Test Execution Screenshots
+
+Arora Kumar, Amit (iGATE)
+530013317
+Password56
+
+setx mobile n
+
+
+
+12044236-001###mn003##
+12044327-001###mn036##
+
+
+'BB0908.D5E.LRM.JCL(P5ELNDUM)'
+
+\\sew26010\RBCPRNT01
+
+
+
+    LOAN    STATUS    
+    02    OPENED    
+    03    ACTIVE    
+    04    DELINQUENT     
+    05    NON-ACCRUAL  det = DELINQUENT + 90days  
+    08    CLOSED    FERME
+    10    RESERVED   field    
+    11    INCOMPLETE    
+    12    PENDING 
+
+
+Annedi, Saritha [7:02 PM]:
+qf4ht7s
+Annedi, Saritha [7:02 PM]:
+Nik291
+Annedi, Saritha [7:02 PM]:
+qf4ht7s
+Annedi, Saritha [7:02 PM]:
+Nik291
+
+
+
+12023321-001 Fut date 03/feb-->auto_102_T.c
+12024196-001 Fut date 03/feb-->auto_101_T.C
+12033312-001 Fut date 03/feb-->auto_002_T.C
+
+
+
+Routing Officer Casper:735215022
+
+HPQC Password RESET:
+http://s3w07714/qcpasswordreset/
+
+
+
+
+
+01358
+06575
+
+
+18665315656 13408 HO PC
+im-07355819
+
+
+Originate Prathibha ID: 523699718
+Password: prathi14
+
+Originate Poornima ID:143287118
+Password: poornima123
+
+Yamini Originate ID:
+196224737	
+r456789
+
+
+
+Gayatri Citrix:
+143291664
+Summer09
+
+
+SDF Card: Personal (Password: discovery  in each case)
+4519037306057306
+4519037306061837
+4519037306060193
+Password: discovery 
+
+
+Kotha Gandhi, Naveen Kumar (iGATE) [3:14 PM]:
+Qid: QD5HF59
+Password is ABC123.
+
+Pavan Citrix:
+198550352
+Password1
+
+
+Mukesh Citrix:
+192034239
+Password1
+
+Nanda Citrix:
+527112098
+Password1
+
+Princy Citrix:
+143287100
+Password1
+
+Pooja Citrix:
+529347783
+Summer10
+
+Details: 
+
+Your logins for AML test is created.
+
+The path is  http://rbc.easyi.com/
+
+Username : your igate  mail id
+
+Password: RBCAML(caps)
+
+Pl see the attachment for any doubts.
+
+
+
+
+
+IST:
+
+OCC --- 820015832 ---- Transit 00002   
+
+QCC --- 642984245 --- Transit 00001
+
+BCC----948122205 ---- Transit 00010
+
+
+Annedi, Saritha Citrx:
+USERNAME: 192679843
+PASSWORD: Password333
+
+
+The authorization number for IST are:
+
+OCC
+Authorized credit number for RCL is 5346309 -001
+Authorized credit number for RCLSEC is 5346333-001
+
+QCC
+Authorized credit number for RCL is 4971511-001
+Authorized credit number for RCLSEC is 4971545-001
+
+BCC
+Authorized credit number for RCL is 9415167-001
+Authorized credit number for RCLSEC is 9415191-001
+
+
+Anavatti, Hema Rao (iGATE) [10:02 AM]:
+820139715, 821712866 
+
+
+
+\\sew26010\RBC_PSG$
+
+
+
+Variable 	11712460-001 
+Fixed 		11712528-001 
+Variable 	11712791-001 
+Fixed 		11713005-001 
+Fixed Loan 	11710092-001 
+Fixed Loan 	11710126-001 
+Fixed Loan 	11710456-001 
+RCL 		11712403-001 
+RCL Secured 	11712437-001 
+
+
+
+12134359-001 RCL
+
+
+
+Hubert 60181-416-348-2782
+
+Mortgages 00405046600
+
+143338408
+
+
+CASPER Trasit Changing:
+C:\rbfg\jc\exe\Casper.exe E;732080635; 00010;143484376;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 00005;143497113;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 03426;143497113;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 05220;948082599;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 03132;143497113;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 08943;143497113;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 03132;143477347;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 00081;143497113;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 03132;007973431;W;0;0 /PCCASP=2x
+C:\rbfg\jc\exe\Casper.exe E;732080635; 09500;948082599;W;0;0 /PCCASP=2x
+
+CASPER PENDING AUTHORIZATION:
+735215022-00001
+730585544-00002
+735215011-00002
+
+
+
+
+Alberta---------------------T2E2T1
+British Columbia------------V1E1G8
+Manitoba--------------------R9A1K5
+New Brunswick---------------E1C2M6
+Newfoundland and Labrador---A0K4S0
+Nova Scotia-----------------B1P2S6
+Northwest Territories-------X1A3S8
+Nunavut---------------------X0A0H0
+Ontario---------------------K1N5M4
+Prince Edward Island--------C1B1T6
+Quebec----------------------G1K3W6
+Saskatchewan----------------S0G0H0
+Yukon-----------------------Y1A1A8
+
+VIP_SOA and VIP_SOA_H
+
+
+
+Took an application with a Loan Renewal in Pdg Update status(with all the client details completed).
+
+Below are the steps with which i created this scenario:
+1) Revisited the Credit Bureau screen of an already completed client. 
+2) Pop-up box appears. Made a selection in the pop up box and clicked on Continue. Submit button in the Credit Bureau screen is enabled. 
+3) Clicked on Submit. Credit Bureau is not pulled due to Equifax error. Credit Bureau screen becomes unchecked. Client status becomes Pending Credit Review.
+4) Loan Renewal Status still remains as Pdg Update.
+5) Clicked on the Credit Approval screen. Activate button is enabled.
+6) Clicked on Activate button. Recieved message Account Update successful.
+
+See attachment
+
+App ID: 00405432450
+
+
+Loan Renewal got approved without all the Client folder status being Complete.
+
+Luminita 416 348 5539
+Cell 905 859 7599
+
+
+Credit scores A----BB0908.KIT.LRM.SCOREA.GCC 
+
+
+Please find the steps below for creating this scenario:
+1) Create a Private Banking client with BSC as 690 and transit as 3426.
+2) Add an RCL Unsecured loan to this application and Activate it.
+3) Add a Loan Renewal to the application.
+4) Complete all the remaining screens except for the CMS Details screen.
+5) Status of the application becomes Pending Update although the CMS screen remains unchecked(should not be).
+6) Click on the Credit Approval screen. The Activate button is enabled(athough it should not be enabled).    
+7) Click on the Activate button. Error message is displayed. Manually Updated button gets enabled.
+8) Click on the Manually Updated button. Loan Renewal gets approved without the CMS Details getting completed.
+
+Loan Renewal for Private Banking got Approved without completing the CMS datails screen.
+
+
+
+Business Client:
+Account Manager# 628
+Res Transit: 00002
+Primary SIC: 0999
+
+Srf Bus:732821392
+Srf per:733774400
+
+
+SRCL Renewal:734952534
+
+B score:734952559
+
+BB0908.DD1.DLRPTS.PROD.G1861V00
+
+
+The INDICATOR in the 515/516 A/C Reports for Unsecured RCL should be CAPR. Currently it is displaying CAP in all three IST centers.
+
+Please assign this to Fred, for a fix.
+
+See screenshots.
+
+
+Loan # 12249405-001  2465039  2441437
+Loan # 12249405-001
+Loan # 12249280-001
+
+48256   2473244   2490010  2490653
+
+
+BB0908.DD1.DLRPTS.PROD.G1875V00
+
+
+
+Please provide Crtrix access to the below resource:  
+Name      : Uma Sankaran  
+Extn      : 08041042094
+Asset Tag : QWH-N94-35
+RBC Lan ID: 529634354 
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .  
+
+Thanks, Deep
+
+
+SRCL SEC----account no 12335626-001
+AC # 1208040-001
+SRF# 143711026
+
+27943604-001
+
+SRF Transfered loan: 732279062
+
+BB0908.DD1.DLRPTS.PROD.G1894V00
+
+BB0908.DD1.DLRPTS.PROD.G1895V00
+
+BB0908.DD1.DLRPTS.PROD.G1897V00
+
+BB0908.DD1.DLRPTS.PROD.G1898V00 
+
+BB0908.DD1.DLRPTS.PROD.G1899V00 
+
+ BB0908.DD1.DLRPTS.PROD.G1900V00 
+BB0908.DD1.DLRPTS.PROD.G1915V00
+
+
+
+Steps to Re-create the Scenario:
+
+1) Add a new application using a client who already has an Activated RCL attached to it.
+2) Complete all the Client Details Screens.
+3) Add a Personal--->Loan Renewal and select the already activated RCL
+
+
+1173210-001 increase 07/12/2010
+
+BB0908.DD1.DLRPTS.PROD.G1924V00
+
+1189687-001
+
+BB0908.DD1.DLRPTS.PROD.G1926V00    
+
+
+Stationary Request:
+
+Username: 712899@igate.com
+Password: 123456   
+
+
+
+
+12549499      
+
+
+Origenate 
+
+Indirect Auto Retail :
+App ID 20230315 
+App # 20230325  
+App ID 20230345 
+
+Indirect RV Retail :
+App ID 20230380     
+
+Indirect Marine Retail :
+App ID 20230385     
+
+Indirect Unsecured-Home Improvement :
+App ID 20230390      
+
+
+
+http://gevey.in/products/Gevey-Turbo-SIM-for-iPhone-4-Unlock-Version-4.1%2C-4.2.1%2C-4.3-Baseband-2.10.04%2C-3.10.01.html
+
+
+12015970
+12622932
+12653028
+12653952
+
+
+04128 - Metro Toronto
+04358 - Ontario
+05402 - Thunder Bay
+05403 - Ottawa
+08003 - Nova Scotia
+08213 - Prince Edward Island
+08493 - New Brunswick
+08553 - Newfoundland
+08100 - British Columbia
+04993 - Alberta
+05434 - Saskatchewan
+05118 - Manitoba
+
+
+11582715-001
+12623740-001
+BB0908.D5E.DLRPTS.PRDRPT.GEN.G2666V00
+
+OCC:
+LD.D5E.FIXED.REJECT.REPORT.G2345V00
+
+QCC:
+LD.D5E.CSCRNRM.REJECT.REPORT.G2345V00
+
+
+27994813
+27994847
+27994870
+27984707
+27817758
+27971449
+27971472
+27971506
+
+27994813
+27994847
+27994870
+
+
+144144797
+
+
+Business SRF
+144002383
+
+Screentime = (time)
+Screentime1 = Replace(Screentime,":",".")
+ Window("Online Mortgage System").Page("Open - Advance").CaptureBitmap "U:\"&DataTable("Shortname")&"_"&Screentime1&".bmp"
+
+Citrix credentials for the below resource has expired. Kindly provide access for the same.
+
+Emp Name: Priyankush Raha
+RBC Lan ID: 534930268
+Asset tag: G4J-W94-3C
+
+Please let me know if you require further information.
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Chanderiwala Sana Azam    
+Extn      : 08041044288
+Asset Tag : MRX-T94-3S 
+RBC Lan ID: 536858418      
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep  
+
+
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Hongekar Rupali   
+Extn      : 08041044274
+Asset Tag : 3YH-N94-3M  
+RBC Lan ID: 536858038       
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Subramaniam KrishnaVeni   
+Extn      : 08041044274
+Asset Tag : W77-N94-34 
+RBC Lan ID: 530512904       
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Shrikanth Chitrakoti   
+Extn      : 08041042091
+Asset Tag : 9FY-H84-3B 
+RBC Lan ID: 525160909       
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+BB0908.D5E.ACCT.STMT.SCM.DUP1.G1295V00
+LD.D5E.ACCT.STMT.SCM.DUP1.G0759V00
+
+BB0908.D5E.PFPSTMT.COPY.XPED
+C5E52980
+
+BB0908.D5E.ACCT.STMT.SCM.DUP1.G1296V00
+LD.D5E.ACCT.STMT.SCM.DUP1.G0760V00
+
+XRW2UTV
+
+PRF:
+
+BB0055.DHN.REN.AGREE.SYMCOR.PROD.G0097V00 21 Sep
+BB0055.DHN.REN.AGREE.SYMCOR.PROD.G0098V00 24 Sep
+
+RDF:
+
+ BB0055.DHN.REN.AGREE.G3257V00 21 Sep
+ BB0055.DHN.REN.AGREE.G3258V00 24 Sep
+
+
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Nikhil Kahane  
+Extn      : 08041044227
+Asset Tag : 4ZH-N94-3Q
+RBC Lan ID: 538550260      
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Pratik Mehata  
+Extn      : 08041044223
+Asset Tag : YZH-N94-3L
+RBC Lan ID: 538566951      
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Rucha Joshi 
+Extn      : 08041044113
+Asset Tag : 357-N94-35
+RBC Lan ID: 538605593     
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Priyanka Khune 
+Extn      : 08041044072
+Asset Tag : G47-N94-3G
+RBC Lan ID: 538552431     
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Navya Sindhu Potluru 
+Extn      : 08041044044
+Asset Tag : Z8H-N94-34 
+RBC Lan ID: 538569427     
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+Please provide Crtrix access to the below resource:       
+
+Name      : SHREYA GHOSH
+Extn      : 08041044183
+Asset Tag : TZH-N94-3G
+RBC Lan ID: 538639725    
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Vedanti Naresh Patil
+Extn      : 08041044201
+Asset Tag : J37-N94-3G
+RBC Lan ID: 538567124   
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Nikhil Chaudhari
+Extn      : 08041044201
+Asset Tag : ZZH-N94-3M
+RBC Lan ID: 538626771  
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Umesh Junnarkar
+Extn      : 08041044243
+Asset Tag : Z57-N94-33
+RBC Lan ID: 538567314 
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Vishal Reddy Alty
+Extn      : 08041044249
+Asset Tag : C47-N94-3C
+RBC Lan ID: 538692641
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+Please provide Crtrix access to the below resource:       
+
+Name      : Mohammed Mudesser Pasha
+Extn      : 08041044024
+Asset Tag : HYH-N94-32 
+RBC Lan ID: 522588078
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+ADMIN IST Transits:
+BCC 00537
+OCC 09391
+Qcc 08071
+
+
+OCC 00002/356
+Qcc 00010/048
+
+
+Please provide Crtrix access to the below resources:       
+
+Name: Aradhana Rajsekaran
+Lan ID: 540767415
+Asset Tag : NTH-N94-3X
+Ext : 8905 
+
+Name: Abhinav Jaiswal
+Lan ID: 540716156
+Asset Tag : LDP-J84-3V
+Ext : 8911 
+
+Name: Pravin Dhamannapatil
+Lan ID: 540842135
+Asset Tag : 837-N94-36
+Ext : 4282 
+
+Name: Gayatri Challapalli
+Lan ID: 540576808
+Asset Tag : H2H-N94-36
+Ext : 4241    
+
+Name: Praveena Jayasankaran
+Lan ID: 541115796
+Asset Tag : QF7-V94-36
+Ext : 8949 
+
+Name: Deepthi Tangirala
+Lan ID: 542013677
+Asset Tag : Y9B-X94-3J
+Ext : 4068 
+
+Name: Sasi Mulukuri
+Lan ID: 542013537
+Asset Tag : 437-N94-32
+Ext : 4179 
+
+Name: Sarvanth Nandiraju
+Lan ID: 541162251
+Asset Tag : WYH-N94-3G
+Ext : 4234 
+
+Name: Buvaneswaran Shanmugam
+Lan ID: 540500741
+Asset Tag : 48P-J84-34
+Ext : 8922 
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+Please provide Crtrix access to the below resources:       
+
+Name: Prajila Kuzhyil
+Lan ID: 541116216
+Asset Tag : DM8-N94-3J
+Ext : 8949
+
+Name: Florence Salins
+Lan ID: 541116000
+Asset Tag : V57-V94-3R
+Ext : 8948 
+
+Name: Rasool Shaik
+Lan ID: 538604166
+Asset Tag : 8QX-T94-3C
+Ext : 4204
+
+Name: Narsingh Rajput
+Lan ID: 531108223
+Asset Tag : QC7-V94-32
+Ext : 4062
+
+Name: Shilpa Kumari
+Lan ID: 527428254
+Asset Tag : G7H-N94-3H
+Ext : 8501
+
+Name: Swati S Sargule
+Lan ID: 538553850
+Asset Tag : V4J-W94-3R
+Ext : 1722 
+
+Name: Kiranmayi Vangala
+Lan ID: 540767589
+Asset Tag : 29H-N94-37
+Ext : 4044 
+
+Name: Sravan Kumar Naredla
+Lan ID: 540692993
+Asset Tag : 86B-X94-3S
+Ext : 4206 
+
+Name: Naveen Kanaiya
+Lan ID: 540692704
+Asset Tag : X6B-X94-3H
+Ext : 4288 
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+Please provide Crtrix access to the below resources:       
+
+Name: SunilReddy Mandadi
+Lan ID: 540908589
+Asset Tag : Y6B-X94-3J
+Ext : 4068 
+
+Name: Neelkanta Rao
+Lan ID: 540692845
+Asset Tag : W6B-X94-3G
+Ext : 4026 
+
+Name: Harish Gampa
+Lan ID: 540692712
+Asset Tag : 96B-X94-3T
+Ext : 4044 
+
+Name: Chinthu Jose
+Lan ID: 538548306
+Asset Tag : 56J-W94-36
+Ext : 2989
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+Please provide Crtrix access to the below resources:       
+
+Name: Kirthiha Sajith 
+Lan ID:  538404674
+Asset Tag: VPQ-J84-3Z
+Ext: 1717 
+   
+Name: Harinadh Perumalla 
+Lan ID: 538636895 
+Asset Tag: X57-N94-3Z 
+Ext: 4076 
+
+Name: Naik Narasimha 
+Lan ID: 538626599 
+Asset Tag: ZRZ-H84-39 
+Ext: 4076 
+
+Name: Amruta Yadavrao Borate 
+Lan ID: 538566548 
+Asset Tag: SZJW943H  
+Ext: 1719 
+
+Name: Indraneel Potnis 
+Lan ID: 538625468 
+Asset Tag: L4J-W94-3H 
+Ext: 1728 
+
+Name: Swapna Balakrishna 
+Lan ID: 538471954 
+Asset Tag: 757-V94-34 
+Ext: 1712 
+
+Name: Sreejit Chandrabose 
+Lan ID: 534950878 
+Asset Tag: VVH-N94-37 
+Ext: 1710 
+
+Name: Reynold Clinton 
+Lan ID: 538540121 
+Asset Tag: 7F7-V94-3N 
+Ext: 1713 
+
+Name: Rajesh BT 
+Lan ID: 538595935 
+Asset Tag: MZJ-W94-3B 
+Ext: 2095 
+
+For Servers: S3W01807 SDF TS, S3W01809 SDF TS, SEW09053 SDF TS, SEW09054 SDF TS .       
+
+Thanks, 
+Deep
+
+
+13-1004179437 BN2061989020113 

@@ -1,0 +1,611 @@
+[PCOMM SCRIPT HEADER]
+LANGUAGE=VBSCRIPT
+DESCRIPTION=
+[PCOMM SCRIPT SOURCE]
+
+autECLSession.SetConnectionByName(ThisSessionName)
+
+REM This line calls the macro subroutine
+subSub1_
+
+Public objSelection
+Public wrdDoc
+Public wrdApp
+Public path
+Public pathname
+Public extn
+
+sub subSub1_()
+
+str = "CMS"
+
+   Set objExcel = CreateObject("Excel.Application")
+       objExcel.Workbooks.Open ("C:\Program Files\Pcom\private\TestData.xls")
+       Set objWS = objExcel.Worksheets("test accounts")
+
+Set objService = GetObject ("winmgmts:")
+    For Each Process In objService.InstancesOf("Win32_process")
+           If Process.Name = "WINWORD.EXE" Then
+           ProcessName = Process.Name
+           PID = Process.processid
+           m_lProcessID = PID
+           Process.Terminate
+           End If
+    Next
+
+i=6
+j=6
+While (j<>0)
+If objWS.Cells(i,1).Value<>"" then 
+i=i+1
+else
+j=0
+	end if
+
+Wend
+i=i-1
+
+
+path="D:\Test\"
+extn=".doc"
+pathname= path & str & extn
+Set wrdApp = CreateObject ("Word.Application")
+Set wrdDoc = wrdApp.Documents.Add()
+wrdDoc.SaveAs (pathname)
+wrdDoc.Close
+Set wrdDoc = wrdApp.Documents.Open(pathname)
+Set objSelection = wrdApp.Selection
+OpenWordDoc_(objSelection)
+
+
+for j=6 to i
+
+   autECLSession.autECLOIA.WaitForAppAvailable
+   
+   autECLSession.autECLOIA.WaitForInputReady
+  
+   datasetname=objWS.Cells(1,2).Value
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "'"&datasetname&"'"
+   
+
+   recordlayout=objWS.Cells(2,2).Value
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "'"&recordlayout&"'"
+
+
+   membername=objWS.Cells(3,2).Value
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys membername
+
+
+   UpdScrnsht_(objSelection)
+   
+ 
+
+ 
+
+       
+   autECLSession.autECLOIA.WaitForAppAvailable
+   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[enter]"
+   
+   autECLSession.autECLPS.WaitForAttrib 2,13,"08","3c",3,10000
+
+   autECLSession.autECLPS.WaitForCursor 2,14,10000
+
+   autECLSession.autECLOIA.WaitForAppAvailable
+   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "2"
+   
+   UpdScrnsht_(objSelection)
+
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[enter]"
+   
+   autECLSession.autECLPS.WaitForAttrib 2,14,"08","3c",3,10000
+
+   autECLSession.autECLOIA.WaitForAppAvailable
+   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[pf3]"
+   
+   autECLSession.autECLPS.WaitForAttrib 2,14,"08","3c",3,10000
+
+   autECLSession.autECLOIA.WaitForAppAvailable
+   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[pf3]"
+
+ autECLSession.autECLOIA.WaitForAppAvailable
+   
+   autECLSession.autECLOIA.WaitForInputReady
+   
+   acctNum=Trim(objWS.Cells(j,1).Value)
+	Concatstr="f "&Trim(acctNum)
+  autECLSession.autECLOIA.WaitForInputReady	
+   autECLSession.autECLPS.SendKeys "f" 
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[space]"
+ autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys acctNum
+ autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+
+  UpdScrnsht_(objSelection)
+
+   autECLSession.autECLPS.SendKeys "[enter]"
+
+   
+   autECLSession.autECLPS.WaitForAttrib 4,40,"20","3c",3,10000
+
+
+   autECLSession.autECLOIA.WaitForAppAvailable
+   autECLSession.autECLOIA.WaitForInputReady
+
+bflag="False"
+
+For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,19,10)= "ACCT-LN-NO" then
+ accountnum=autECLSession.autECLPS.gettext (k,41,12)
+	bflag="True"
+End if
+	If bflag="True" then
+		Exit for
+	Else
+              if k=22 and bflag <>"True" then
+              	autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+
+           End if 
+       
+ End if
+ Next       
+
+UpdScrnsht_(objSelection)          
+                        
+                        rem <Output to the Excel>
+
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,3).VALUE= accountnum
+		   
+			rem </Output to the Excel> 
+
+
+autECLSession.autECLOIA.WaitForAppAvailable
+ autECLSession.autECLOIA.WaitForInputReady
+
+
+bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,21,13)="CURR-INT-RATE" then
+ currentintrate=autECLSession.autECLPS.gettext (k+1,42,8)
+	bflag="True"
+End if
+
+	If bflag="True" then
+		Exit for
+	Else   
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next                   
+
+
+UpdScrnsht_(objSelection)         
+
+                        rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,5).VALUE= currentintrate
+			
+   
+			rem </Output to the Excel> 
+
+
+    autECLSession.autECLOIA.WaitForAppAvailable
+     autECLSession.autECLOIA.WaitForInputReady
+
+ bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="INT-RATE(1)" then
+ intrate1=autECLSession.autECLPS.gettext (k+1,42,8)
+	bflag="True"
+End if
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+
+UpdScrnsht_(objSelection)
+
+                          rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,8).VALUE= intrate1
+			
+   
+			 rem </Output to the Excel>
+
+
+
+autECLSession.autECLOIA.WaitForAppAvailable
+     autECLSession.autECLOIA.WaitForInputReady
+
+  bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="MAT-DATE(1)" then
+ matdate1=autECLSession.autECLPS.gettext (k+1,41,11)
+	bflag="True"
+
+ End if
+
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+
+           
+UpdScrnsht_(objSelection)
+
+                         rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,9).VALUE= matdate1
+			
+   
+			rem </Output to the Excel>
+
+autECLSession.autECLOIA.WaitForAppAvailable
+     autECLSession.autECLOIA.WaitForInputReady
+
+
+ bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="INT-RATE(2)" then
+ intrate2=autECLSession.autECLPS.gettext (k+1,42,8)
+	bflag="True"
+
+End if 
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+UpdScrnsht_(objSelection) 
+              
+                         rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,12).VALUE= intrate2
+			
+   
+			 rem </Output to the Excel>
+
+
+      autECLSession.autECLOIA.WaitForAppAvailable
+      autECLSession.autECLOIA.WaitForInputReady
+
+ bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="MAT-DATE(2)" then
+ matdate2=autECLSession.autECLPS.gettext (k+1,41,11)
+	bflag="True"
+
+ End if
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+             
+UpdScrnsht_(objSelection)
+                          rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,13).VALUE= matdate2
+			
+   
+			 rem </Output to the Excel>
+
+
+     autECLSession.autECLOIA.WaitForAppAvailable
+     autECLSession.autECLOIA.WaitForInputReady
+
+ bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="INT-RATE(3)" then
+ intrate3=autECLSession.autECLPS.gettext (k+1,42,8)
+	bflag="True"
+ End if
+ 
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+                
+UpdScrnsht_(objSelection)         
+			rem  <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,16).VALUE= intrate3
+			   
+			
+			rem  </Output to the Excel>
+
+      autECLSession.autECLOIA.WaitForAppAvailable
+      autECLSession.autECLOIA.WaitForInputReady
+ 
+ bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="MAT-DATE(3)" then
+ matdate3=autECLSession.autECLPS.gettext (k+1,41,11)
+	bflag="True"
+
+ End if
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+
+UpdScrnsht_(objSelection)
+
+                         rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,17).VALUE= matdate3
+			
+   
+			rem </Output to the Excel>
+
+
+     autECLSession.autECLOIA.WaitForAppAvailable
+     autECLSession.autECLOIA.WaitForInputReady
+
+  bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="INT-RATE(4)" then
+ intrate4=autECLSession.autECLPS.gettext (k+1,42,8)
+	bflag="True"
+
+ End if
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+
+UpdScrnsht_(objSelection)
+
+                         rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,20).VALUE= intrate4
+			
+   
+			 rem </Output to the Excel>
+
+      autECLSession.autECLOIA.WaitForAppAvailable
+      autECLSession.autECLOIA.WaitForInputReady
+
+  bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="MAT-DATE(4)" then
+ matdate4=autECLSession.autECLPS.gettext (k+1,41,11)
+	bflag="True"
+
+ End if
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+  
+UpdScrnsht_(objSelection)
+
+
+                        rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,21).VALUE= matdate4
+			
+   
+			rem </Output to the Excel>
+
+
+     autECLSession.autECLOIA.WaitForAppAvailable
+     autECLSession.autECLOIA.WaitForInputReady
+
+ bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="INT-RATE(5)" then
+ intrate5=autECLSession.autECLPS.gettext (k+1,42,8)
+	bflag="True"
+
+ End if
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+
+UpdScrnsht_(objSelection)
+
+
+                         rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,24).VALUE= intrate5
+			
+   
+			rem </Output to the Excel>
+
+      autECLSession.autECLOIA.WaitForAppAvailable
+      autECLSession.autECLOIA.WaitForInputReady
+
+ 
+ bflag="False"
+ For k=4 to 22
+ if autECLSession.autECLPS.gettext (k,25,11)="MAT-DATE(5)" then
+ matdate5=autECLSession.autECLPS.gettext (k+1,41,11)
+	bflag="True"
+
+ End if
+	If bflag="True" then
+		Exit for
+	Else
+                if k=22 and bflag <>"True" then
+		autECLSession.autECLPS.SendKeys "[pf8]"
+		k=3
+	End if 
+End if 
+Next 
+           
+UpdScrnsht_(objSelection)
+
+                         rem <Output to the Excel>
+
+			Set objWS = objExcel.Worksheets("test accounts")
+			objWS.Cells(j,25).VALUE= matdate5
+			
+   
+			rem </Output to the Excel>
+
+
+
+
+
+
+
+
+ autECLSession.autECLOIA.WaitForAppAvailable
+   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[pf3]"
+
+
+Next 
+
+SaveDoc_ wrdDoc,pathname
+
+
+CloseDoc_ wrdDoc,wrdApp
+
+Set objService = GetObject ("winmgmts:")
+    For Each Process In objService.InstancesOf("Win32_process")
+           If Process.Name = "WINWORD.EXE" Then
+           ProcessName = Process.Name
+           PID = Process.processid
+           m_lProcessID = PID
+           Process.Terminate
+           End If
+    Next
+
+
+
+end sub
+
+
+sub OpenWordDoc_(wrdApp)
+
+
+'Create the screen capture object
+Set oScreenCapture = CreateObject("KnowledgeInbox.ScreenCapture")
+'Capture the desktop window to clipboard
+oScreenCapture.CaptureDesktop "[Clipboard]"
+objSelection.Paste
+objSelection.EndKey 6, 0
+Set oScreenCapture = Nothing
+
+end sub
+ 
+sub UpdScrnsht_(wrdApp)
+
+'Create the screen capture object
+Set oScreenCapture = CreateObject("KnowledgeInbox.ScreenCapture")
+'Capture the desktop window to clipboard
+oScreenCapture.CaptureDesktop "[Clipboard]"
+'Update a word document and paste the image in the document
+objSelection.Paste
+objSelection.EndKey 6, 0   
+Set oScreenCapture = Nothing
+
+end sub
+
+
+sub SaveDoc_(wrdDoc,pathname)
+
+wrdDoc.SaveAs (pathname)
+
+end sub
+
+sub CloseDoc_(wrdDoc,wrdApp)
+
+    wrdDoc.Close
+    Set wrdDoc = Nothing
+    Set wrdApp = Nothing
+
+end sub

@@ -1,0 +1,253 @@
+[PCOMM SCRIPT HEADER]
+LANGUAGE=VBSCRIPT
+DESCRIPTION=
+[PCOMM SCRIPT SOURCE]
+'OPTION EXPLICIT
+autECLSession.SetConnectionByName(ThisSessionName)
+
+REM This line calls the macro subroutine
+subSub1_
+
+sub subSub1_()
+   autECLSession.autECLOIA.WaitForAppAvailable
+   
+
+Dim xlApp,xlBook,xlSheet
+Dim i,row
+
+Set xlApp=CreateObject("Excel.Application")
+
+'EXCEL NAME
+Dim path,path1
+path1=Inputbox("Enter the Excel Sheet Name")
+path="C:\Program Files\Pcom\private\" & path1
+Set xlBook=xlApp.Workbooks.Open(path)
+set xlSheet=xlBook.Worksheets("SRF_PERSONAL")
+
+
+i=InputBox("Enter the number of Rows including the header")
+
+
+   'Msgbox i
+
+
+   	   For row=2 to i
+
+
+Transit=xlSheet.cells(row,1).value
+Acc_num=xlSheet.cells(row,2).value
+Surname=xlSheet.cells(row,3).value
+Given_name=xlSheet.cells(row,4).value
+AL1=xlSheet.cells(row,5).value
+AL2=xlSheet.cells(row,6).value
+City=xlSheet.cells(row,7).value
+Prov=xlSheet.cells(row,8).value
+Postal_code=xlSheet.cells(row,9).value
+Mail_dest=xlSheet.cells(row,10).value
+BSC=xlSheet.cells(row,11).value
+SIC=xlSheet.cells(row,12).value
+Res_code=xlSheet.cells(row,13).value
+Sex=xlSheet.cells(row,14).value
+Lang=xlSheet.cells(row,15).value
+yyyy=xlSheet.cells(row,16).value
+MM=xlSheet.cells(row,17).value
+DD=xlSheet.cells(row,18).value
+CMI=xlSheet.cells(row,19).value
+BCRMS_Ind=xlSheet.cells(row,20).value
+FGN_City=xlSheet.cells(row,21).value
+Zip_code=xlSheet.cells(row,22).value
+
+
+
+
+
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "11"
+   autECLSession.autECLPS.SendKeys Transit
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[enter]"
+   autECLSession.autECLOIA.WaitForAppAvailable   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "dda"
+   autECLSession.autECLPS.SendKeys Transit
+   autECLSession.autECLPS.SendKeys Acc_num
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "01"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[enter]"  
+
+autECLSession.autECLOIA.WaitForAppAvailable
+   
+autECLSession.autECLOIA.WaitForInputReady
+
+Decide4=autECLSession.autECLPS.gettext (24,2,7)
+
+
+if ((Decide4="SRF062E") or (Decide4="SRF014E")) then
+
+
+set SRF_PERSONAL=xlBook.Worksheets("SRF_PERSONAL")
+
+SRF_PERSONAL.Cells(row,23).Value=Decide4
+
+   autECLSession.autECLOIA.WaitForAppAvailable
+   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[pf4]"
+
+
+else 
+
+ 
+   autECLSession.autECLOIA.WaitForAppAvailable  
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys Surname
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys Given_name
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[enter]"
+   autECLSession.autECLOIA.WaitForAppAvailable 
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys AL1
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys AL2
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys City
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+
+
+
+if ((FGN_City <> empty) or (Zip_codes <> empty)) then
+
+
+
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady 
+
+
+   autECLSession.autECLPS.SendKeys FGN_City
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady   			
+   autECLSession.autECLPS.SendKeys Zip_code
+
+else
+
+   autECLSession.autECLOIA.WaitForInputReady  			
+   autECLSession.autECLPS.SendKeys Prov  			
+   autECLSession.autECLPS.SendKeys Postal_code   
+
+autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+
+end if
+
+
+
+   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys Mail_dest
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys BSC
+   autECLSession.autECLPS.SendKeys SIC
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys Res_code
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys Sex
+   autECLSession.autECLPS.SendKeys Lang
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys yyyy
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[right]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys MM
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[right]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys DD
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[tab]"
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys CMI
+   autECLSession.autECLPS.SendKeys BCRMS_Ind
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[enter]"
+   autECLSession.autECLOIA.WaitForAppAvailable   
+   autECLSession.autECLOIA.WaitForInputReady
+   autECLSession.autECLPS.SendKeys "[enter]"
+   autECLSession.autECLOIA.WaitForAppAvailable
+   autECLSession.autECLOIA.WaitForInputReady
+
+SRF_Number=autECLSession.autECLPS.gettext (9,53,9)
+
+
+'msgbox SRF_Number
+
+
+set SRF_PERSONAL=xlBook.Worksheets("SRF_PERSONAL")
+
+SRF_PERSONAL.Cells(row,23).Value=SRF_Number
+
+
+
+   autECLSession.autECLPS.SendKeys "[enter]"
+
+end if
+Next
+
+xlApp.ActiveWorkbook.Close True
+xlApp.Quit
+end sub
